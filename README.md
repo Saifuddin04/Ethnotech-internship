@@ -1,0 +1,2 @@
+# Ethnotech-internship
+
