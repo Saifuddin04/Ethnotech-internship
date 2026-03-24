@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="ttt-box text-center">
+
+<h2>❌ Tic Tac Toe ⭕</h2>
+
+<h4 id="status">Player X's Turn</h4>
+
+<div id="board" class="board">
+    {% for i in range(9) %}
+    <div class="cell" data-index="{{ i }}"></div>
+    {% endfor %}
+</div>
+
+<div class="mt-4">
+    <button onclick="resetGame()" class="btn btn-success">Play Again</button>
+    <a href="/dashboard" class="btn btn-secondary">Home</a>
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/tictactoe.js') }}"></script>
+
+{% endblock %}

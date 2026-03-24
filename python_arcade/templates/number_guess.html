@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="guess-box text-center">
+
+<h3 class="text-center mt-4">🎯 Guess the Number (1-100)</h3>
+
+<input id="guess" type="number" class="form-control mt-3 text-center">
+
+<div class="text-center mt-3">
+    <button onclick="checkGuess()" class="btn btn-primary">Guess</button>
+    <button onclick="exitGame()" class="btn btn-danger ms-2">Exit Game</button>
+</div>
+
+<!-- RESULT DISPLAY -->
+<div id="resultBox" class="result-box mt-4"></div>
+
+<!-- ACTION BUTTONS AFTER WIN -->
+<div id="afterWin" class="text-center mt-4" style="display:none;">
+    <button onclick="playAgain()" class="btn btn-success">Play Again</button>
+    <a href="/dashboard" class="btn btn-secondary ms-2">Home</a>
+</div>
+
+<script src="{{ url_for('static', filename='js/guess.js') }}"></script>
+
+{% endblock %}

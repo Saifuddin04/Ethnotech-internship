@@ -1,0 +1,223 @@
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+}
+
+.quiz-box{
+max-width:600px;
+margin:auto;
+margin-top:80px;
+padding:40px;
+background:#1e293b;
+border-radius:10px;
+box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.option-btn{
+width:100%;
+margin-top:10px;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.wrong {
+    background-color: red !important;
+}
+
+/* =========================
+   Quiz Completed Page
+   ========================= */
+
+.completed-box {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+    background: #1e293b;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
+}
+
+.completed-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.completed-box p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-custom {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.play-btn {
+    background-color: #22c55e;
+    border: none;
+}
+
+.play-btn:hover {
+    background-color: #16a34a;
+}
+
+.dashboard-btn {
+    background-color: #3b82f6;
+    border: none;
+}
+
+.dashboard-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Guess Game Box */
+.guess-box {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+}
+
+/* Result Text */
+.result-text {
+    font-size: 32px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+/* Show Animation */
+.result-text.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Colors */
+.result-text.low {
+    color: #facc15;
+}
+
+.result-text.high {
+    color: #38bdf8;
+}
+
+.result-text.win {
+    color: #22c55e;
+}
+
+/* Button hover effects */
+.btn {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   RESULT BOX (FINAL FIX)
+   ========================= */
+
+.result-box {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin-top: 30px;
+    min-height: 60px;
+    opacity: 1; /* 🔥 ALWAYS VISIBLE */
+}
+
+/* SHOW ANIMATION */
+.result-box.show {
+    animation: pop 0.4s ease forwards;
+}
+
+/* POP EFFECT */
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* SHAKE EFFECT */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
+}
+
+.result-box.shake {
+    animation: shake 0.3s;
+}
+
+/* COLORS */
+.result-box.low {
+    color: #facc15;
+}
+
+.result-box.high {
+    color: #ef4444;
+}
+
+.result-box.win {
+    color: #22c55e;
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+/* =========================
+   Tic Tac Toe
+   ========================= */
+
+.ttt-box {
+    max-width: 400px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: #334155;
+    transform: scale(1.05);
+}
