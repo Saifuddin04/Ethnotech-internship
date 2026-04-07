@@ -1,0 +1,497 @@
+/* ======================= GLOBAL ======================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* ======================= NAVBAR ======================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #111827;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #a5b4fc;
+}
+
+/* ======================= HERO SECTION ======================= */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  min-height: 90vh;
+  flex-wrap: wrap;
+}
+
+/* Left content */
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  background: white;
+  color: #4f46e5;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e5e7eb;
+}
+
+/* Right side products */
+.hero-products {
+  display: flex;
+  gap: 40px;
+}
+
+/* Product */
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 140px;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.product p {
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ======================= SECTIONS ======================= */
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Grid Layouts */
+.features,
+.testimonials,
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ======================= CARDS ======================= */
+
+.feature,
+.price-card,
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #f3f4f6;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 🔥 TESTIMONIAL HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Avatar */
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Avatar zoom on hover */
+.card:hover .avatar {
+  transform: scale(1.1);
+}
+
+/* Stars */
+.stars {
+  color: gold;
+}
+
+/* ======================= FORM ======================= */
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+/* ======================= FOOTER ======================= */
+
+footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+/* ================= PRICING PREMIUM ================= */
+
+.pricing-section {
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 80vh; /* 👈 fixes footer floating issue */
+}
+
+.pricing-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.pricing-subtext {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* Pricing Cards */
+.price-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.price-card h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.price-card span {
+  font-size: 1rem;
+  color: gray;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.price-card ul li {
+  margin: 10px 0;
+}
+
+/* Hover effect */
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Highlight popular plan */
+.popular {
+  transform: scale(1.05);
+  border: 2px solid #4f46e5;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #4f46e5;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* ================= FEATURES PREMIUM ================= */
+
+.features-section {
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 80vh; /* 👈 fixes footer position */
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.features-subtext {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Icons */
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Improve grid spacing */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CONTACT PREMIUM ================= */
+
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 80vh; /* 👈 fixes footer position */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Form */
+.contact-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #4338ca;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: left;
+  max-width: 300px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark .card,
+body.dark .feature-card,
+body.dark .price-card,
+body.dark .contact-form {
+  background: #1f2937;
+  color: white;
+}
+
+#darkToggle {
+  margin-left: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* ================= DARK MODE (CSS ONLY) ================= */
+
+#dark-toggle {
+  display: none;
+}
+
+.dark-btn {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  background: #1f2937;
+  transition: 0.3s;
+}
+
+.dark-btn:hover {
+  background: #374151;
+}
+
+/* Apply dark mode */
+#dark-toggle:checked ~ * {
+  background: #0f172a;
+  color: white;
+}
+
+#dark-toggle:checked ~ * .card,
+#dark-toggle:checked ~ * .feature-card,
+#dark-toggle:checked ~ * .price-card,
+#dark-toggle:checked ~ * .contact-form {
+  background: #1f2937;
+}
+
+/* ================= MOBILE MENU (CSS ONLY) ================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111827;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  /* Toggle menu */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+/* ================= CSS ANIMATIONS ================= */
+
+.contact-form,
+.contact-info {
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover,
+.contact-info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
